@@ -30,7 +30,7 @@ public class TCPClient {
                 // Check user input
                 if (command.equals("Q")) {
                     break; // Quit if user enters 'Q'
-                } else if (command.equals("B") || command.equals("H")) {
+                } else if (command.equals("B") || command.equals("H") ||command.equals(" ")) {
                     System.out.print("Enter a number: ");
                     String number = scanner.nextLine();
                     // Send command and number to the server
