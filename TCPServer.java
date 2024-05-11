@@ -14,14 +14,9 @@ public class TCPServer {
                 while (true) {
                     String request = inFromClient.readLine(); // Read a request from the client
 
-                    if (request == null) {
-                        outToClient.println("500 Request is empty");
-                        continue;
-                    }
-
-                    if (request.length() < 2) {
-                        outToClient.println("300 Bad request");
-                        continue;
+                    if (request == null || request.isEmpty() || request.trim().isEmpty()) {
+                      outToClient.println("500 Empty request");
+                      continue;
                     }
 
                     char command = request.charAt(0); // Extract command
