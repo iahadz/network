@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TCPClient {
     public static void main(String[] args) {
        try {
-            Socket socket = new Socket("127.0.0.1", 1111); // Connect to the server
+            Socket socket = new Socket("192.168.0.94", 1111); // Connect to the server
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream())); // Input stream to receive data from the server
             PrintWriter outToServer = new PrintWriter(socket.getOutputStream(), true); // Output stream to send data to the server
             Scanner scanner = new Scanner(System.in); // Scanner to read user input
